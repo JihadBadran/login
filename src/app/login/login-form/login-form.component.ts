@@ -38,10 +38,14 @@ export class LoginFormComponent implements OnInit {
    */
   validateEmail() {
     if (this.emailAuth.valid) {
-      this.sentAuth = true;
-      console.log('clicked');
-      return true;
+
+      // this line goes in the callback of api auth
+      this.nextStep();
     }
+  }
+
+  nextStep() {
+    this.sentAuth = true;
   }
 
   backStep() {
