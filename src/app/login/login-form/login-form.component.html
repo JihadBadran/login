@@ -70,7 +70,7 @@
       <input
         [ngClass]="{'has-error':this.emailAuth.get('email').touched && (this.emailAuth.get('email').invalid)}"
         formControlName="password" class="input100" type="password" name="username" placeholder="كلمة المرور">
-      <p *ngIf="this.secondStepLogin.get('password').touched && (this.secondStepLogin.get('password').invalid)">الرجاء ادخال كلمة مرور من ٦ الى ٨ احرف</p>
+      <p *ngIf="this.secondStepLogin.get('password').touched && (this.secondStepLogin.get('password').invalid)">الرجاء ادخال كلمة مرور من 8 الى 20 احرف</p>
       <span class="focus-input100"></span>
     </div>
 
