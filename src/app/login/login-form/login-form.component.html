@@ -59,6 +59,13 @@
 
     <h6>تم ارسال كود التحقق على البريد الالكتروني</h6>
 
+    <div class="wrap-input100 validate-input m-b-16" data-validate="كود التحقق مطلوب">
+      <input
+        [ngClass]="{'has-error':this.emailAuth.get('email').touched && (this.emailAuth.get('email').invalid)}"
+        formControlName="validationCode" class="input100" type="text" name="username" placeholder="كود التحقق">
+      <p *ngIf="this.secondStepLogin.get('validationCode').touched && (this.secondStepLogin.get('validationCode').invalid)">الرجاء ادخال كود التحقق</p>
+      <span class="focus-input100"></span>
+    </div>
     <div class="wrap-input100 validate-input m-b-16" data-validate="كلمة المرور مطلوبة">
       <input
         [ngClass]="{'has-error':this.emailAuth.get('email').touched && (this.emailAuth.get('email').invalid)}"
@@ -67,13 +74,6 @@
       <span class="focus-input100"></span>
     </div>
 
-    <div class="wrap-input100 validate-input m-b-16" data-validate="كود التحقق مطلوب">
-      <input
-        [ngClass]="{'has-error':this.emailAuth.get('email').touched && (this.emailAuth.get('email').invalid)}"
-        formControlName="validationCode" class="input100" type="text" name="username" placeholder="كود التحقق">
-      <p *ngIf="this.secondStepLogin.get('validationCode').touched && (this.secondStepLogin.get('validationCode').invalid)">الرجاء ادخال كود التحقق</p>
-      <span class="focus-input100"></span>
-    </div>
 
 
     <div class="container-login100-form-btn">
